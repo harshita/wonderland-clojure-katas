@@ -22,3 +22,16 @@
            (decipher "opkyfipmfmwcvqoklyhxywgeecpvhelzg" "thequickbrownfoxjumpsoveralazydog")))
     (is (= "scones"
            (decipher "hcqxqqtqljmlzhwiivgbsapaiwcenmyu" "packmyboxwithfivedozenliquorjugs")))))
+
+(deftest test-index
+  (testing "can return index of char in message"
+  (is (= 1 (index "message" "e")))))
+
+(deftest test-generate-sequence
+  (testing "can return the sequence given a range"
+    (is (= "abcdeabc" (generate-sequence \a \e 8)))))
+
+(deftest test-repeat-keyword-for-message
+  (testing "can return keyword for message"
+    (is (= "keywordk" (repeat-keyword-for-message "messages" "keyword")))))
+
